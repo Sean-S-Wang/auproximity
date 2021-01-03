@@ -4,6 +4,7 @@ import {Pose} from "../Client";
 // For duck-typing the model
 export interface BackendModel {
     gameCode: string;
+    throttle: number;
     backendType: BackendType;
 }
 export interface PublicLobbyBackendModel extends BackendModel {

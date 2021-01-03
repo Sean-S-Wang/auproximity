@@ -16,7 +16,7 @@
           maxlength="6"
           outlined
         ><v-text-field
-          v-model="throttleRate"
+          v-model="throttle"
           label="Throttle Rate"
           :rules="[rules.required]"
           outlined
@@ -95,6 +95,7 @@ export default class ServerConnector extends Vue {
 
   name = '';
   gameCode = this.$route.params.gamecode ? this.$route.params.gamecode.slice(0, 6) : '';
+  throttle = this.$route.params.throttle ? this.$route.params.throttle: 300;
 
   // Backends
   // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
@@ -157,6 +158,7 @@ export default class ServerConnector extends Vue {
     this.name = name
     const backendModel: BackendModel = {
       gameCode: this.gameCode.toUpperCase(),
+      throttle: this.throttle,
       backendType: this.backendType
     }
     if (this.backendType === BackendType.PublicLobby) {

@@ -12,7 +12,7 @@ export default class ImpostorBackend extends BackendAdapter {
         this.backendModel = backendModel;
     }
 
-    throttledEmitPlayerMove = _.throttle(this.emitPlayerPose, 100)
+    throttledEmitPlayerMove = _.throttle(this.emitPlayerPose,this.backendModel.throttle)
 
     initialize(): void {
         try {
