@@ -15,6 +15,11 @@
           counter="6"
           maxlength="6"
           outlined
+        ><v-text-field
+          v-model="throttleRate"
+          label="Throttle Rate"
+          :rules="[rules.required]"
+          outlined
         ></v-text-field>
         <v-select
           v-model="backendType"

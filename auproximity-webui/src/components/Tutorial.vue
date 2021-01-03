@@ -29,7 +29,7 @@ export default class Tutorial extends Vue {
     'Press the "Join" button, and share the URL with your friends to invite them.',
     'Remember to allow your microphone, and get everyone to join the proximity before the game starts.',
     'If it doesn\'t work for you on the first try, refresh the page and/or try a different browser like Firefox or Chrome.',
-    'Seans custom edit.'
+    'Custom Throttle rate for update for player pose is in milliseconds. Default is 300.'
   ]
 }
 </script>
