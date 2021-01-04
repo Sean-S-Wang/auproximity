@@ -15,7 +15,8 @@
           counter="6"
           maxlength="6"
           outlined
-        ><v-text-field
+        ></v-text-field>
+        <v-text-field
           v-model="throttle"
           label="Throttle Rate"
           :rules="[rules.required]"
