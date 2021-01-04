@@ -337,7 +337,7 @@ export default class ServerDisplayer extends Vue {
 
   lerp (distance: number) {
     //const trueVolume = 1 - (distance / this.LERP_VALUE)
-    const trueVolume = -((distance-this.LERP_VALUE)/(distance+this.LERP_VALUE))
+    const trueVolume = - ((distance - this.LERP_VALUE) / (distance + this.LERP_VALUE))
     // clamp above 0, and then below 1
     return Math.min(Math.max(trueVolume, 0), 1)
   }
