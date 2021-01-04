@@ -95,7 +95,7 @@ export default class ServerConnector extends Vue {
 
   name = '';
   gameCode = this.$route.params.gamecode ? this.$route.params.gamecode.slice(0, 6) : '';
-  throttle = this.$route.params.throttle ? this.$route.params.throttle: 300;
+  throttle = 300;
 
   // Backends
   // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
