@@ -7,7 +7,7 @@ export default class NoOpBackend extends BackendAdapter {
         this.backendModel = {
             backendType: BackendType.NoOp,
             gameCode: "NOPNOP",
-            throttle: 300
+            throttle: 50
         };
     }
 
