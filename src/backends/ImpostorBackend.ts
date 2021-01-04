@@ -15,6 +15,8 @@ export default class ImpostorBackend extends BackendAdapter {
     throttledEmitPlayerMove = _.throttle(this.emitPlayerPose,this.backendModel.throttle)
 
     initialize(): void {
+        // Print throttle to console
+        console.log(this.backendModel.throttle)
         try {
             this.connection = new HubConnectionBuilder()
                 .withUrl(`http://${this.backendModel.ip}:${IMPOSTOR_BACKEND_PORT}/hub`).build();
