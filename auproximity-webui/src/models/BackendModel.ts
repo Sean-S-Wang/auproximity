@@ -1,6 +1,7 @@
 export interface BackendModel {
   gameCode: string;
   backendType: BackendType;
+  throttle:  number;
 }
 export interface PublicLobbyBackendModel extends BackendModel {
   backendType: BackendType.PublicLobby;
